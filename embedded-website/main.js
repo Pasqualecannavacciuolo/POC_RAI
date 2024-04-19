@@ -5,7 +5,7 @@ const PORT = 3000;
 
 
 app.use((req, res, next) => {
-    const allowedDomains = ["http://127.0.0.1:5500"]; // Lista di indirizzi consentiti
+    const allowedDomains = ["http://127.0.0.1:5500", "https://main-website-gray.vercel.app/"]; // Lista di indirizzi consentiti
     const allowedDomainsString = allowedDomains.join(' ');
     res.setHeader('Content-Security-Policy', `frame-ancestors ${allowedDomainsString}`);
     next();
