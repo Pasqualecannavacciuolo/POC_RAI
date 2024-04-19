@@ -19,9 +19,9 @@ app.get('/',  (req, res) => {
 });
 
 // Rotta per il contenuto da incorporare in iframe
-app.get('/contenuto',  (req, res) => {
+/*app.get('/contenuto',  (req, res) => {
     res.sendFile(path.join(__dirname, "public", 'index.html')); // Invia il file HTML come risposta
-});
+});*/
 
 app.listen(PORT, () => {
     console.log(`Server A in esecuzione su http://localhost:${PORT}`);
