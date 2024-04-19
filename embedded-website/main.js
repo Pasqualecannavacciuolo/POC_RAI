@@ -14,6 +14,10 @@ app.use((req, res, next) => {
 // Middleware per servire i file statici dalla directory "public"
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/',  (req, res) => {
+    res.sendFile(path.join(__dirname, "public", 'index.html')); // Invia il file HTML come risposta
+});
+
 // Rotta per il contenuto da incorporare in iframe
 app.get('/contenuto',  (req, res) => {
     res.sendFile(path.join(__dirname, "public", 'index.html')); // Invia il file HTML come risposta
