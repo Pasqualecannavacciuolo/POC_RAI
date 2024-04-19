@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #05061e;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+  
+.title {
+    display: flex;
+    justify-content: center;
+    color: #fafafa;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-container {
+    padding: 15px;
+    margin: 13px 0 7px 0;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.serie-title, .serie-season, .serie-description {
+    color: #fafafa;
+    width: 640px;
+}
