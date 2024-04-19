@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Rotta per il contenuto da incorporare in iframe
 app.get('/contenuto',  (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html')); // Invia il file HTML come risposta
+    res.sendFile(path.join(__dirname, "public", 'index.html')); // Invia il file HTML come risposta
 });
 
 app.listen(PORT, () => {
