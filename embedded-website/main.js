@@ -9,8 +9,10 @@ app.use((req, res, next) => {
     const allowedDomainsString = allowedDomains.join(' ');
     res.setHeader('Content-Security-Policy', `frame-ancestors ${allowedDomainsString}`);
     next();*/
-    const allowedDomain = "https://main-website-gray.vercel.app"; // Dominio consentito
+    /*const allowedDomain = "https://main-website-gray.vercel.app"; // Dominio consentito
     res.setHeader('Content-Security-Policy', `frame-ancestors ${allowedDomain}`);
+    next();*/
+    res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' https://main-website-gray.vercel.app/; style-src 'self'; font-src 'self'; img-src 'self'; object-src 'none'");
     next();
 });
 
