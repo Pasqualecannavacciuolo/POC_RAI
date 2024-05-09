@@ -5,9 +5,12 @@ const PORT = 3000;
 
 
 app.use((req, res, next) => {
-    const allowedDomains = ["https://main-website-gray.vercel.app"]; // Lista di indirizzi consentiti
+    /*const allowedDomains = ["https://main-website-gray.vercel.app"]; // Lista di indirizzi consentiti
     const allowedDomainsString = allowedDomains.join(' ');
     res.setHeader('Content-Security-Policy', `frame-ancestors ${allowedDomainsString}`);
+    next();*/
+    const allowedDomain = "https://main-website-gray.vercel.app"; // Dominio consentito
+    res.setHeader('Content-Security-Policy', `frame-ancestors ${allowedDomain}`);
     next();
 });
 
